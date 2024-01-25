@@ -64,7 +64,12 @@
             div.appendChild(p);
 
             selectedColor = color;
+
+            div.addEventListener('dblclick', function () {
+                elem.removeChild(div);
+            });
         }
+
 
         function changeColor(color) {
             const text = document.getElementById('ColText');
