@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        input[type="text"] {
+            width: 50px;
+            text-align: center;
+            height: 50px;
+            font-size: 36px;
+        }
+        .container{
+            display: flex;
+        }
+        .arrow
+        {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" id="Input" readonly>
+        <div class="arrow">
+            <label onselectstart="return false" onclick="increment()">⬆</label>
+            <label onselectstart="return false" onclick="decrement()">⬇</label>
+        </div>
+
+    </div>
+
+
+    <script>
+        let numb = document.getElementById('Input');
+        let numValue = 0;
+
+        function increment() {
+            numValue++;
+            updateNumb();
+        }
+
+        function decrement() {
+            numValue--;
+            updateNumb();
+        }
+
+        function updateNumb() {
+            numb.value = numValue;
+        }
+    </script>
+
+</body>
+
+</html>
